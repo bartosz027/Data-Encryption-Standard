@@ -14,8 +14,8 @@ namespace DES {
             var key2 = "1000111111111011001111011101100110011110111010100010110011001000";
             Console.WriteLine("Key2  : {0}\n", key2);
 
-            // Encrypt
-            var input1 = "THIS IS TEST MESSAGE!";
+            // Encryption
+            var input1 = "TEST MESSAGE!";
             Console.WriteLine("Input : {0}", input1);
 
             var output1 = des.EncryptText(input1, key1);
@@ -23,14 +23,14 @@ namespace DES {
 
             Console.WriteLine();
 
-            // Decrypt with different key
+            // Decryption with correct key
             var input2 = output1;
             des.PrintBitArray("Input : ", input2);
 
             var output2 = des.DecryptText(input2, key1);
             Console.WriteLine("Output: {0}\n", output2);
 
-            // Decrypt with different key
+            // Decryption with invalid key
             var input3 = output1;
             des.PrintBitArray("Input : ", input3);
 
